@@ -14,16 +14,9 @@ export default function Main() {
 
     return (
         <div className="Main">
-            <button onClick={() => {
-                increaseScore();
-                }}>current</button>
-
-            <button onClick={() => {
-                setCurrentScore(0);
-            }}>lose</button>
-            
-            {currentScore}
-            {bestScore}
+            <div className="scores">
+                    Current Score: {currentScore} | Best Score: {bestScore}
+            </div>
         </div>
     )
 }
