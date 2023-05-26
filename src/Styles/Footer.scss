@@ -1,0 +1,28 @@
+@import "./config";
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  background-color: $main-color;
+  gap: 6px;
+  padding: clamp(0.2rem, 0.8vw, 0.4rem);
+
+  .text {
+    color: $second-font-color;
+    font-size: clamp(0.2rem, 2vw, 0.75rem);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    img {
+      height: auto;
+      width: clamp(0.4rem, 3vw, 1rem);
+    }
+
+    img:hover {
+      transform: scale(1.2);
+    }
+  }
+}

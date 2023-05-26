@@ -1,1 +1,23 @@
-/*# sourceMappingURL=Footer.css.map */
+.Footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  background-color: #EAE7DC;
+  gap: 6px;
+  padding: clamp(0.2rem, 0.8vw, 0.4rem);
+}
+.Footer .text {
+  color: #8E8D8A;
+  font-size: clamp(0.2rem, 2vw, 0.75rem);
+}
+.Footer a {
+  display: flex;
+  align-items: center;
+}
+.Footer a img {
+  height: auto;
+  width: clamp(0.4rem, 3vw, 1rem);
+}
+.Footer a img:hover {
+  transform: scale(1.2);
+}/*# sourceMappingURL=Footer.css.map */
