@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"Main.css"}
+{"version":3,"sources":["Main.scss","Main.css"],"names":[],"mappings":"AAEA;EACI,gBAAA;ACDJ","file":"Main.css","sourcesContent":["@import \"./config\";\r\n\r\n.Main {\r\n    min-width: 100vw;\r\n}",".Main {\n  min-width: 100vw;\n}"]}
