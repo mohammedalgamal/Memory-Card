@@ -17,6 +17,8 @@ import USFlag from "../Images/US.png";
 export default function Main() {
     const [currentScore, setCurrentScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
+    const [allClicked, setAllClicked] = useState([]);
+
     const flags = [
         {imageSrc: AngolaFlag, countryName: "Angola"},
         {imageSrc: ArgentinaFlag, countryName: "Argentina"}, 
@@ -39,6 +41,21 @@ export default function Main() {
         };
     };
 
+    const resetScore = () => {
+        setCurrentScore(0);
+    };
+
+    const calculateScore = (justClicked) => {
+        if (allClicked.includes(justClicked)) {
+            resetScore();
+            setAllClicked([]);
+        }
+        else {
+            increaseScore();
+            setAllClicked(allClicked.concat(justClicked));
+        };
+    };
+
     return (
         <div className="Main">
             <div className="scores">
@@ -48,7 +65,7 @@ export default function Main() {
                 {flags.map((country) => {
                     return (
                         <Card
-                            increaseScore={increaseScore}
+                            calculateScore={calculateScore}
                             imageSrc={country.imageSrc}
                             countryName={country.countryName}
                         />
