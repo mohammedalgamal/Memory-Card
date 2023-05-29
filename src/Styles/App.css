@@ -140,14 +140,14 @@ table {
 }
 
 .App {
-  background-color: #EAE7DC;
+  background-color: #eae7dc;
   display: flex;
   flex-direction: column;
 }
 
 body button,
-body input[type=submit],
-body input[type=reset] {
+body input[type="submit"],
+body input[type="reset"] {
   background: none;
   color: inherit;
   border: none;
@@ -155,4 +155,4 @@ body input[type=reset] {
   font: inherit;
   cursor: pointer;
   outline: inherit;
-}/*# sourceMappingURL=App.css.map */
+} /*# sourceMappingURL=App.css.map */
