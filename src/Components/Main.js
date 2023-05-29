@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../Styles/Main.css";
 import Card from './Card';
 import AngolaFlag from "../Images/Angola.png";
@@ -14,25 +14,58 @@ import SaudiFlag from "../Images/Saudi-arabia.png";
 import UKFlag from "../Images/UK.png";
 import USFlag from "../Images/US.png";
 
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex !== 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    };
+  
+    return array;
+};
+
 export default function Main() {
     const [currentScore, setCurrentScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
     const [allClicked, setAllClicked] = useState([]);
+    const [flags, setFlags] = useState(
+        [
+            {imageSrc: AngolaFlag, countryName: "Angola"},
+            {imageSrc: ArgentinaFlag, countryName: "Argentina"}, 
+            {imageSrc: BelgiumFlag, countryName: "Belgium"},
+            {imageSrc: CambodiaFlag, countryName: "Cambodia"}, 
+            {imageSrc: CameroonFlag, countryName: "Cameroon"},
+            {imageSrc: CanadaFlag, countryName: "Canada"},
+            {imageSrc: ChileFlag, countryName: "Chile"},
+            {imageSrc: ChinaFlag, countryName: "China"},
+            {imageSrc: EgyptFlag, countryName: "Egypt"},
+            {imageSrc: SaudiFlag, countryName: "KSA"},
+            {imageSrc: UKFlag, countryName: "UK"},
+            {imageSrc: USFlag, countryName: "US"}
+        ]
+    );
 
-    const flags = [
-        {imageSrc: AngolaFlag, countryName: "Angola"},
-        {imageSrc: ArgentinaFlag, countryName: "Argentina"}, 
-        {imageSrc: BelgiumFlag, countryName: "Belgium"},
-        {imageSrc: CambodiaFlag, countryName: "Cambodia"}, 
-        {imageSrc: CameroonFlag, countryName: "Cameroon"},
-        {imageSrc: CanadaFlag, countryName: "Canada"},
-        {imageSrc: ChileFlag, countryName: "Chile"},
-        {imageSrc: ChinaFlag, countryName: "China"},
-        {imageSrc: EgyptFlag, countryName: "Egypt"},
-        {imageSrc: SaudiFlag, countryName: "KSA"},
-        {imageSrc: UKFlag, countryName: "UK"},
-        {imageSrc: USFlag, countryName: "US"}
-    ];
+    useEffect(() => {
+        const allCards = document.querySelectorAll(".card");
+
+        allCards.forEach((card) => {
+            card.addEventListener("click", setFlags(shuffle(flags)));
+        });
+
+        return () => {
+            allCards.forEach((card) => {
+                card.removeEventListener("click", setFlags(shuffle(flags)));
+            });
+        };
+    });
 
     const increaseScore = () => {
         setCurrentScore(currentScore + 1);
