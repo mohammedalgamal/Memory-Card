@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import uniqid from "uniqid";
 import "../Styles/Main.css";
 import Card from './Card';
 import AngolaFlag from "../Images/Angola.png";
@@ -105,6 +106,7 @@ export default function Main() {
                 {flags.map((country) => {
                     return (
                         <Card
+                            key={uniqid()}
                             calculateScore={calculateScore}
                             imageSrc={country.imageSrc}
                             countryName={country.countryName}
