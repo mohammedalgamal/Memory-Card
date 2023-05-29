@@ -33,8 +33,11 @@ function shuffle(array) {
 };
 
 export default function Main() {
+    const storedBestScore = JSON.parse(localStorage.getItem("bestScore")) === null ?
+                            0 : JSON.parse(localStorage.getItem("bestScore"));
+
     const [currentScore, setCurrentScore] = useState(0);
-    const [bestScore, setBestScore] = useState(0);
+    const [bestScore, setBestScore] = useState(storedBestScore);
     const [allClicked, setAllClicked] = useState([]);
     const [flags, setFlags] = useState(
         [
@@ -66,6 +69,10 @@ export default function Main() {
             });
         };
     });
+
+    useEffect(() => {
+        localStorage.setItem("bestScore", JSON.stringify(bestScore));
+    }, [bestScore]);
 
     const increaseScore = () => {
         setCurrentScore(currentScore + 1);
