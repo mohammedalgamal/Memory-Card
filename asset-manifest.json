@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Memory-Card/static/css/main.4dc15aed.css",
+    "main.js": "/Memory-Card/static/js/main.9c52f24e.js",
+    "static/media/Saudi-arabia.png": "/Memory-Card/static/media/Saudi-arabia.b5c523c0e4789cdc074e.png",
+    "static/media/SunnyspellsRegular-MV9ze.otf": "/Memory-Card/static/media/SunnyspellsRegular-MV9ze.5d3e37fefc5faad04ba2.otf",
+    "static/media/Egypt.png": "/Memory-Card/static/media/Egypt.b5dd53e445e61b315ea1.png",
+    "static/media/US.png": "/Memory-Card/static/media/US.ab36ffccc3fb4a249eab.png",
+    "static/media/Angola.png": "/Memory-Card/static/media/Angola.a1a24a32a4ff39318775.png",
+    "static/media/China.png": "/Memory-Card/static/media/China.c9326c3cbbedaeefe4e0.png",
+    "static/media/Argentina.png": "/Memory-Card/static/media/Argentina.e43dfe9cfaddc2642b37.png",
+    "static/media/UK.png": "/Memory-Card/static/media/UK.229b8d2c47e088c99eaf.png",
+    "static/media/Chile.png": "/Memory-Card/static/media/Chile.b8dd89f102cbb3e7b8f0.png",
+    "static/media/Canada.png": "/Memory-Card/static/media/Canada.5b4705ec21f04955ac26.png",
+    "static/media/Cameroon.png": "/Memory-Card/static/media/Cameroon.9e4511e5076fdd04a658.png",
+    "static/media/Cambodia.png": "/Memory-Card/static/media/Cambodia.6d178f24d51589202564.png",
+    "static/media/Belgium.png": "/Memory-Card/static/media/Belgium.6242aac37c10550f70b0.png",
+    "index.html": "/Memory-Card/index.html",
+    "main.4dc15aed.css.map": "/Memory-Card/static/css/main.4dc15aed.css.map",
+    "main.9c52f24e.js.map": "/Memory-Card/static/js/main.9c52f24e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4dc15aed.css",
+    "static/js/main.9c52f24e.js"
+  ]
+}
